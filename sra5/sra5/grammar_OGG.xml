@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE grammar PUBLIC "-//W3C//DTD GRAMMAR 1.0//EN"
+                "grammar.dtd">
+<!-- the default grammar language is FR  -->
+<grammar  version="1.0"
+          mode ="voice"
+          xmlns="http://www.w3.org/2001/06/grammar"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                              grammar.xsd"
+          xml:lang="fr-FR" root="order" tag-format="semantics/1.0">
+          
+   <rule id="order" scope="public"> 
+    <ruleref special="GARBAGE" /> 
+    <one-of>
+      <item><ruleref uri="#yes"/>
+          <tag>out="action=YES";</tag></item>
+      <item><ruleref uri="#no"/>
+        <tag>out="action=NO";</tag></item>
+      <item><ruleref uri="#the"/>
+          <tag>out="action=THE";</tag></item>
+      <item><ruleref uri="#café"/>
+          <tag>out="action=CAFE";</tag></item>
+    </one-of>
+    <!--<ruleref special="GARBAGE" />-->
+  </rule>
+       
+   <rule id="yes">
+    <one-of>
+      <item>affirmatif</item>
+      <item>oui</item>
+    </one-of> 
+  </rule> 
+  <rule id="no">
+    <one-of>
+      <item>négatif</item>
+      <item>non</item>
+      <item>pas question</item>
+    </one-of>
+  </rule>
+
+  <rule id="the">
+    <one-of>
+      <item>du thé à la menthe</item>
+      <item>thé vert </item>
+      <item>thé noir </item>
+      <item>thé au lait </item>
+    </one-of>
+  </rule>
+
+  <rule id="café">
+    <one-of>
+      <item>café</item>
+      <item>café au lait </item>
+    </one-of>
+  </rule>
+</grammar>

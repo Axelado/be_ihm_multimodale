@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE grammar PUBLIC "-//W3C//DTD GRAMMAR 1.0//EN"
+                "grammar.dtd">
+<!-- the default grammar language is FR  -->
+<grammar  version="1.0"
+          mode ="voice"
+          xmlns="http://www.w3.org/2001/06/grammar"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                              grammar.xsd"
+          xml:lang="fr-FR" root="order" tag-format="semantics/1.0">
+          
+   <rule id="order" scope="public"> 
+    <ruleref special="GARBAGE" /> 
+    <one-of>
+      <item><ruleref uri="#couleur"/>
+          </item>
+      <item><ruleref uri="#formes"/>
+      </item>
+      <item><ruleref uri="#commande"/>
+      </item>
+      <item><ruleref uri="#lieu"/>
+      <tag>out="action=ICI";</tag>
+    </item>
+    </one-of>
+    <!--<ruleref special="GARBAGE" />-->
+  </rule>
+       
+   <rule id="couleur">
+    <one-of>
+      <item>jaune
+      <tag>out="action=JAUNE";</tag></item>
+    
+    <item>bleu
+      <tag>out="action=BLEU";</tag></item>
+
+    <item>violet
+      <tag>out="action=VIOLET";</tag></item>
+    
+    <item>rouge 
+      <tag>out="action=ROUGE";</tag></item>
+
+    <item>vert 
+      <tag>out="action=VERT";</tag></item>  
+    </one-of> 
+  </rule> 
+
+
+  <rule id="formes">
+    <one-of>
+       <item>carre
+      <tag>out="action=CARRE";</tag></item>
+    
+    <item>rectangle
+      <tag>out="action=rectangle";</tag></item>
+
+    <item>triangle
+      <tag>out="action=TRIANGLE";</tag></item>
+    
+    <item>cercle
+      <tag>out="action=CERCLE";</tag></item>
+
+    <item>losange 
+      <tag>out="action=losange";</tag></item>  
+    </one-of>
+  </rule>
+
+  <rule id="commande">
+    <one-of>
+       <item>cree
+      <tag>out="action=CREE";</tag></item>
+    
+    <item>deplace
+      <tag>out="action=DEPLACE";</tag></item>
+
+    <item>supprime
+      <tag>out="action=SUPPRIME";</tag></item>
+
+    </one-of>
+  </rule>
+
+  <rule id="lieu">
+    <one-of>
+      <item>ici</item>
+      <item>la</item>
+    </one-of>
+  </rule>
+
+
+</grammar>
