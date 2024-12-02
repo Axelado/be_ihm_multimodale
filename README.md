@@ -2,7 +2,7 @@
 
 ## Description
 
-Le projet "BE IHM MULTIMODALE" utilise une application **Processing** pour afficher des formes sur un tableau blanc interactif. Cette application permet d'ajouter des formes en utilisant soit des commandes clavier, soit de la reconnaissance vocale via un programme Python. Les formes peuvent être affichées, déplacées, redimensionnées, ou supprimées en fonction des interactions.
+Le projet "BE IHM MULTIMODALE" utilise une application **Processing** pour afficher des formes sur un tableau blanc interactif. Cette application permet d'ajouter des formes en utilisant soit des commandes clavier, soit de la reconnaissance vocale via un programme Python. Les formes peuvent être affichées, déplacées, ou supprimées en fonction des interactions.
 
 ## Prérequis
 
